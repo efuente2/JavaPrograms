@@ -2,7 +2,7 @@ package javaProblems;
 
 public class BinaryToDecimalConversion {
 
-    public void BinaryToDecimalConversion(){
+    public BinaryToDecimalConversion(){
 
     }
 
