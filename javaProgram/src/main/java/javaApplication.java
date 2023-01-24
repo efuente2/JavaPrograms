@@ -1,5 +1,9 @@
 import javaProblems.*;
+import javaProblems.AbstractClass.Car;
 import javaProblems.AbstractClass.ExtendsAbstract;
+import javaProblems.AbstractClass.Toyota;
+import javaProblems.Inheritance.Animal;
+import javaProblems.Inheritance.Dog;
 import javaProblems.Interface.InterfaceImplementation;
 
 import java.util.Scanner;
@@ -104,7 +108,80 @@ public class javaApplication {
         //Show Binary Search
         int[] binarySearchArray = {1,2,3,4,5,6,7,8,9,10};
 
-        //BinarySearch binarySearch = new BinarySearch(5, binarySearchArray);
+        BinarySearch binarySearch = new BinarySearch(5, binarySearchArray);
+
+        //Swapping Pair of Characters in a String;
+        String swapString = "Hello World";
+        SwappingPairOfCharacters swapPairOfCharactersInAString = new SwappingPairOfCharacters();
+        swapPairOfCharactersInAString.swap(swapString);
+
+        //Read content from one file and writing it into another file
+        ReadContentAndWriteToFile readContentAndWriteToFile = new ReadContentAndWriteToFile();
+        readContentAndWriteToFile.readAndWrite();
+
+        //Compare Paths of Two files
+        String path1 = "C:\\Users\\User\\Desktop\\javaProgram\\src\\main\\java\\javaProblems\\HandleTheUncheckedExceptions.java";
+        String path2 = "C:\\Users\\User\\Desktop\\javaProgram\\src\\main\\java\\javaProblems\\HandleTheCheckedExceptions.java";
+
+        ComparePathsOfTwoFiles comparePathsOfTwoFiles = new ComparePathsOfTwoFiles();
+        comparePathsOfTwoFiles.comparePaths(path1, path2);
+
+        //Show Use of Static and Non-static Methods
+        StaticAndNonStaticMethods staticAndNonStaticMethods = new StaticAndNonStaticMethods();
+        StaticAndNonStaticMethods.staticMethod();//belongs to the class but not the instance of the class
+        staticAndNonStaticMethods.nonStaticMethod();//is accessible through an instance of the class
+
+        //Show Usage of Access Modifier
+        AccessModifier accessModifier = new AccessModifier();
+        accessModifier.publicMethod();//public methods can be accessed from anywhere, this method also call the other methods in the class.
+        //accessModifier.protectedMethod();//can be accessed by a subclass
+        //accessModifier.defaultMethod();//can be accessed by a class in the same package
+        //accessModifier.privateMethod();//can only be accessed within the class
+
+        //how Overloading of Methods in Class
+        OverloadingMethods overloadingMethods = new OverloadingMethods();
+        overloadingMethods.add(1,2);
+        overloadingMethods.add(1,2,3);//overloading methods have the same name but different parameters
+
+        //Overriding of Methods in Classes
+        OverridingMethods overridingMethods = new OverridingMethods();
+        overridingMethods.toString();//this method is overridden in the subclass
+
+        //Show Use of Super Keyword in Class
+        SuperKeywordImpl superKeyword = new SuperKeywordImpl();//this calls the constructor in the superclass
+        superKeyword.superMethod();//this calls the super class method
+
+        //Show Use of This Keyword in Class
+        ThisKeyword thisKeyword = new ThisKeyword("hello world");
+        thisKeyword.getKeyword();
+
+        //Show Usage of Static keyword in Class
+        StaticKeyword staticKeyword = new StaticKeyword();
+        StaticKeyword.staticMethod();//static methods can be called without creating an instance of the class
+
+        //print Spiral Pattern of Numbers
+        SpiralPattern spiralPattern = new SpiralPattern();
+        spiralPattern.print();
+
+        //Show Inheritance in Class
+        Dog dog = new Dog();
+        dog.setName("fiod");
+        dog.getName();
+
+        //Show Abstraction in Class
+        Car carolla = new Toyota();
+        carolla.start();
+
+        //Data Hiding in Class
+        DataHiding dataHiding = new DataHiding();
+        dataHiding.setAge(20);
+        dataHiding.getAge();
+
+        //Polymorphism in Class
+        Animal chihuahua = new Dog();
+        chihuahua.sound();
+
+
 
     }
 }
